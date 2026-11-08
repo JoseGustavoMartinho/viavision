@@ -1,0 +1,23 @@
+# Ambiente virtual
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.pyc
+
+# Pesos e resultados de treino/avaliação
+*.pt
+runs/
+resultados_avaliacao.csv
+
+# Datasets e vídeos locais (o vídeo de demonstração em exemplos/ é a exceção)
+dataset/
+videos/
+*.mp4
+!transito_demo.mp4
+
+# Editor / sistema
+.vscode/
+.DS_Store
+Thumbs.db
