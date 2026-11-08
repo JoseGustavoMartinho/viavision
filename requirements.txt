@@ -1,0 +1,15 @@
+# ViaVision - dependências (Python recomendado: 3.11, 64 bits)
+# Faixas de versão compatíveis; veja o README para como "congelar" as versões exatas que funcionaram.
+
+streamlit>=1.40,<2
+ultralytics>=8.3.0,<9
+opencv-python>=4.8,<5
+
+# Necessária para o rastreamento integrado (ByteTrack) da Ultralytics.
+# Declarada aqui para não depender de instalação automática durante a análise.
+# Se a instalação falhar no seu Python, troque esta linha por: lapx>=0.5.2
+lap>=0.5.12
+
+# Observações:
+# - O PyTorch (torch/torchvision) é instalado automaticamente pela ultralytics.
+# - pandas e numpy chegam junto com o Streamlit/Ultralytics.
