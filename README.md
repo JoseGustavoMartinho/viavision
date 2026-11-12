@@ -47,6 +47,7 @@ Cada identificador rastreado é contado **uma única vez** por análise. O estad
 | `train.py` | Treinamento/customização com um dataset YOLO fornecido pelo grupo. |
 | `evaluate.py` | Avaliação no conjunto de teste (Precision, Recall, F1, mAP). |
 | `teste_logica.py` | Testes da lógica de cruzamento da linha, área restrita, alertas e série temporal (sem YOLO; os alertas usam um modelo falso). |
+| `extrair_quadros.py` | Prepara o conjunto de avaliação: extrai quadros do vídeo, separa em train/val/test por trecho e cria o `dataset.yaml`. |
 | `exemplos/transito_demo.mp4` | Vídeo curto de trânsito (cerca de 7 MB) para testar o app sem precisar de outro arquivo. |
 | `docs/index.html` | Maquete visual em HTML (simulação, sem IA) para publicar no GitHub Pages. |
 | `GUIA_DO_PROJETO.md` | Como o projeto foi feito, ferramentas, uso na rua, riscos e prompts organizados. |
@@ -77,7 +78,7 @@ Cada identificador rastreado é contado **uma única vez** por análise. O estad
 | Modelo | YOLO11n pré-treinado (COCO) |
 | Execução | `streamlit run app.py`, abrindo em `http://localhost:8501` |
 | Teste da lógica | `python teste_logica.py` (12 testes) |
-| Webcam | **Ainda não testada** (o recurso existe no código, mas não foi validado) |
+| Webcam | Testada (abre e analisa pela webcam do computador, em CPU, com poucos quadros por segundo) |
 
 O app abriu e carregou o modelo normalmente. Este registro diz apenas **onde funcionou**; não é medida de desempenho nem de acerto. As medidas reais estão na seção 6.4 e 6.5.
 
