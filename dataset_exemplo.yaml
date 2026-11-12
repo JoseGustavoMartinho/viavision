@@ -1,0 +1,27 @@
+# ====================================================================
+# EXEMPLO de configuração de dataset no formato YOLO.
+# NÃO é um dataset real: nenhuma imagem acompanha este projeto.
+# Copie este arquivo, ajuste os caminhos e use com train.py / evaluate.py.
+#
+# Estrutura de pastas esperada (cada imagem tem um .txt com mesmo nome em labels):
+#   dataset/
+#     images/train/*.jpg   labels/train/*.txt
+#     images/val/*.jpg     labels/val/*.txt
+#     images/test/*.jpg    labels/test/*.txt
+# Cada linha do .txt: <id_da_classe> <x_centro> <y_centro> <largura> <altura>  (valores entre 0 e 1)
+# ====================================================================
+
+# Pasta raiz do dataset (EXEMPLO: troque pelo caminho real, de preferência absoluto)
+path: C:/caminho/para/dataset
+
+train: images/train
+val: images/val
+test: images/test
+
+# Nomes em inglês, como no COCO: o app reconhece car, motorcycle, bus e truck
+# automaticamente. Mantenha esses nomes se quiser usar o modelo treinado no app.
+names:
+  0: car
+  1: motorcycle
+  2: bus
+  3: truck
